@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D7FFAC43-E6C9-4C91-83CC-C06B2AB364A5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Zachitect_GH</RootNamespace>
+    <AssemblyName>Zachitect_GH</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="RhinoCommon">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Rhino 6\System\rhinocommon.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Grasshopper">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Rhino 6\Plug-ins\Grasshopper\Grasshopper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="GH_IO">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Rhino 6\Plug-ins\Grasshopper\GH_IO.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="0_Annotation\LinePreview.cs" />
+    <Compile Include="0_Annotation\Place3DPin.cs" />
+    <Compile Include="0_Data\RemapValues.cs" />
+    <Compile Include="0_Data\ReorderTrees.cs" />
+    <Compile Include="0_Geometries\DeExtrusion.cs" />
+    <Compile Include="0_Geometries\ClosedCurveUnify.cs" />
+    <Compile Include="0_Geometries\FootprintToRoof.cs" />
+    <Compile Include="0_Geometries\ProjectCurveToMesh.cs" />
+    <Compile Include="0_Data\ValueGate.cs" />
+    <Compile Include="0_Data\DataDict.cs" />
+    <Compile Include="0_Geometries\PullClosestPoints.cs" />
+    <Compile Include="0_Data\SetCount.cs" />
+    <Compile Include="0_Proximity\AllShortPath.cs" />
+    <Compile Include="0_Proximity\ShortestPath.cs" />
+    <Compile Include="0_Geometries\SplitAllCurves.cs" />
+    <Compile Include="0_Theme\ResetComponent.cs" />
+    <Compile Include="0_Theme\DarkComponent.cs" />
+    <Compile Include="0_Theme\ThemeDimension.cs" />
+    <Compile Include="0_Theme\WireTheme.cs" />
+    <Compile Include="0_Theme\CanvasTheme.cs" />
+    <Compile Include="0_Theme\ResetDefaultTheme.cs" />
+    <Compile Include="0_Theme\ActivateDarkTheme.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Public\CommonFunctions.cs" />
+    <Compile Include="Zachitect_GHInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\ShortestPath.png" />
+    <Content Include="Icons\ActivateDarkTheme.png" />
+    <Content Include="Icons\AllShortPath.png" />
+    <Content Include="Icons\CanvasTheme.png" />
+    <Content Include="Icons\ClosedCurveUnify.png" />
+    <Content Include="Icons\DarkComponent.png" />
+    <Content Include="Icons\DataDict.png" />
+    <None Include="Icons\Place3DPin.png" />
+    <Content Include="Icons\DeExtrusion.png" />
+    <Content Include="Icons\FootprintToRoof.png" />
+    <Content Include="Icons\LinePreview.png" />
+    <Content Include="Icons\ProjectCurveToMesh.png" />
+    <Content Include="Icons\PullClosestPoints.png" />
+    <Content Include="Icons\RemapValues.png" />
+    <Content Include="Icons\ReorderTrees.png" />
+    <Content Include="Icons\ResetComponent.png" />
+    <Content Include="Icons\ResetDefaultTheme.png" />
+    <Content Include="Icons\SetCount.png" />
+    <Content Include="Icons\SplitAllCurves.png" />
+    <Content Include="Icons\ThemeDimension.png" />
+    <Content Include="Icons\ValueGate.png" />
+    <Content Include="Icons\WireTheme.png" />
+    <Content Include="Icons\Zachitect_GH.png" />
+    <Content Include="Others\GUIDs.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>Copy "$(TargetPath)" "$(TargetDir)$(ProjectName).gha"
+Erase "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <FallbackCulture>en-US</FallbackCulture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartProgram>C:\Program Files\Rhino 6\System\Rhino.exe</StartProgram>
+    <StartArguments>
+    </StartArguments>
+    <StartAction>Program</StartAction>
+  </PropertyGroup>
+</Project>
